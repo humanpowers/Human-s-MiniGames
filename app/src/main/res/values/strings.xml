@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">Human’s MiniGame</string>
+
+    <string-array name="mainList">
+        <item>영화\n맞추기</item>
+        <item>카드\n맞추기</item>
+        <item>좌로우로</item>
+        <item>곱하기\n더하기</item>
+        <item>"?"</item>
+        <item>"?"</item>
+    </string-array>
+
+
+    <string-array name="operator">
+        <item>+</item>
+        <item>x</item>
+    </string-array>
+
+    <string-array name="cards">
+        <item>billiard</item>
+        <item>ufo</item>
+        <item>robot</item>
+        <item>crab</item>
+        <item>laser_gun</item>
+        <item>windmill</item>
+        <item>seaweed</item>
+        <item>saturn</item>
+        <item></item>
+    </string-array>
+
+    <string-array name="left_right_images">
+        <item>bubbles</item>
+        <item>penguin</item>
+        <item>unicorn</item>
+        <item>fish</item>
+        <item>sea_whale_spouting</item>
+        <item>sea_whale_bubble</item>
+        <item>shrimp</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

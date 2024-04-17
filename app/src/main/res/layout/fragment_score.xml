@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="mainViewModel"
+            type="com.human.humansminigame.MainViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/purple"
+        tools:context=".MainActivity">
+
+        <View
+            android:id="@+id/scoreView"
+            android:layout_width="match_parent"
+            android:layout_height="620dp"
+            android:background="@drawable/box_light_gray"
+            android:elevation="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintVertical_bias="0.8"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/scoreType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:textSize="40sp"
+            android:elevation="10dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:text=""
+            app:layout_constraintTop_toTopOf="@id/scoreView"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/scoreTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="나의 점수"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="50sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/scoreView"
+            app:layout_constraintVertical_bias="0.55"
+            />
+
+        <Button
+            android:id="@+id/scoreCheckButton"
+            android:layout_width="120dp"
+            android:layout_height="65dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/box_light_green"
+            android:translationZ="10dp"
+            android:stateListAnimator="@null"
+            android:text="확인"
+            android:textColor="#000000"
+            android:textSize="40sp"
+            android:layout_marginBottom="50dp"
+            android:layout_marginLeft="30dp"
+            app:layout_constraintBottom_toBottomOf="@id/scoreView"
+            app:layout_constraintLeft_toLeftOf="@id/scoreView"
+            />
+
+        <Button
+            android:id="@+id/scoreRankButton"
+            android:layout_width="120dp"
+            android:layout_height="65dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/box_light_green"
+            android:translationZ="10dp"
+            android:stateListAnimator="@null"
+            android:text="랭킹"
+            android:textColor="#000000"
+            android:textSize="40sp"
+            android:layout_marginBottom="50dp"
+            android:layout_marginEnd="30dp"
+            app:layout_constraintBottom_toBottomOf="@id/scoreView"
+            app:layout_constraintRight_toRightOf="@id/scoreView"
+            />
+
+
+        <TextView
+            android:id="@+id/scoreBestScoreTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="10dp"
+            android:text="나의 최고 점수"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:layout_marginTop="40dp"
+            app:layout_constraintLeft_toLeftOf="@+id/scoreView"
+            app:layout_constraintRight_toRightOf="@id/scoreView"
+            app:layout_constraintTop_toBottomOf="@+id/scoreType"
+            tools:layout_editor_absoluteY="347dp" />
+
+        <TextView
+            android:id="@+id/scoreBestScore"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginLeft="80dp"
+            android:layout_marginRight="80dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/box_yellow"
+            android:elevation="10dp"
+            android:text="0"
+            android:textSize="35sp"
+            android:textColor="@color/black"
+            android:gravity="center"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/scoreBestScoreTitle"
+            />
+
+        <TextView
+            android:id="@+id/scoreCurrentScoreTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="현재 점수"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:elevation="10dp"
+            app:layout_constraintLeft_toLeftOf="@+id/scoreView"
+            app:layout_constraintRight_toRightOf="@id/scoreView"
+            app:layout_constraintTop_toBottomOf="@id/scoreBestScore"
+            />
+
+        <TextView
+            android:id="@+id/scoreCurrentScore"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginLeft="80dp"
+            android:layout_marginRight="80dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/box_human"
+            android:elevation="10dp"
+            android:text="@{String.valueOf(mainViewModel.myCurrentScore)}"
+            android:textSize="35sp"
+            android:textColor="@color/black"
+            android:gravity="center"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/scoreCurrentScoreTitle"
+            />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

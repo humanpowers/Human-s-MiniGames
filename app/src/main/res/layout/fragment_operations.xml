@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout>
+    <data>
+        <variable
+            name="viewModel"
+            type="com.human.humansminigame.MainViewModel" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/light_purple">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+
+            android:text="곱하기 더하기"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="40sp"/>
+
+        <LinearLayout
+            android:id="@+id/operations_background"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="9"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/gray_background_stroke"
+            android:elevation="30dp"
+            android:layout_margin="20dp">
+
+            <ProgressBar
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:id="@+id/operations_progressbar"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.25"
+                android:max="100"
+                android:progress="@{viewModel.progress}"
+                android:progressDrawable="@drawable/progress_bar"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"/>
+
+            <TextView
+                android:id="@+id/operations_score"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_margin="20dp"
+                android:gravity="center"
+
+                android:text="@{String.valueOf(viewModel.score)}"
+                android:textSize="60dp"
+                android:textStyle="bold"
+                android:textColor="@color/purple"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_margin="30dp">
+
+                <TextView
+                    android:id="@+id/operations_left"
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+
+                    android:text="@{String.valueOf(viewModel.operationsLeft)}"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="50sp"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:id="@+id/operations_operator"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+
+                    android:text="@{viewModel.operationsOperator}"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="40sp"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:id="@+id/operations_right"
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:text="@{String.valueOf(viewModel.operationsRight)}"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="50sp"
+                    android:gravity="center" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/operations_answer"
+                android:layout_width="280dp"
+                android:layout_height="0dp"
+                android:layout_weight="0.6"
+                android:background="@drawable/box_yellow"
+
+                android:gravity="center"
+                android:text="@{viewModel.operationsAnswer}"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="30sp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/operations_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:layout_marginTop="40dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</layout>

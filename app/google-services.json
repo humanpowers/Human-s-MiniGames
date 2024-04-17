@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "635337389040",
+    "firebase_url": "https://human-s-minigame-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "human-s-minigame",
+    "storage_bucket": "human-s-minigame.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:635337389040:android:b8452e2fc7ff04a05f6335",
+        "android_client_info": {
+          "package_name": "com.human.humansminigame"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA5tATDv33SBWrOdiWtKwmwwat7ZoSVNSc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

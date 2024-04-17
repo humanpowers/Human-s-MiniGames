@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.human.humansminigame.MainViewModel" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/purple">
+
+        <TextView
+            android:id="@+id/main_fragment_top_text"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_margin="20dp"
+
+            android:text="게    임"
+            android:textSize="50sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:gravity="center" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/fragment_main_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="9"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/gray_background_stroke"
+            android:elevation="10dp"
+
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="40dp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/main_fragment_recyclerview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/main_fragment_rank"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/main_fragment_rank"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/box_human"
+                android:layout_margin="10dp"
+
+                android:elevation="10dp"
+                android:gravity="center"
+
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:text="랭  킹"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/main_fragment_recyclerview"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    </LinearLayout>
+
+</layout>
